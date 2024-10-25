@@ -97,6 +97,7 @@ doc_events = {
     "Sales Invoice": {
         "validate": "posawesome.posawesome.api.invoice.validate",
         "before_submit": "posawesome.posawesome.api.invoice.before_submit",
+        "on_submit": "posawesome.server_scripts.token_number.extract_token_number",
         "before_cancel": "posawesome.posawesome.api.invoice.before_cancel",
     },
     "Customer": {
@@ -104,6 +105,7 @@ doc_events = {
         "after_insert": "posawesome.posawesome.api.customer.after_insert",
     },
 }
+
 
 # Scheduled Tasks
 # ---------------
